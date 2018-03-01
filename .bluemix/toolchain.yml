@@ -14,9 +14,9 @@ template:
     - testscript-repo
   info:
     git url: >-
-      [https://github.com/sam-almighty/simple-toolchain](https://github.com/sam-almighty/simple-toolchain)
+      [https://github.com/ajaychebbi/simple-toolchain-master-android-bitbar](https://github.com/ajaychebbi/simple-toolchain-master-android-bitbar)
     git branch: >-
-      [master](https://github.com/sam-almighty/simple-toolchain/tree/master)
+      [master](https://github.com/ajaychebbi/simple-toolchain-master-android-bitbar/tree/master)
 toolchain:
   name: 'simple-toolchain-{{timestamp}}'
   template:
@@ -27,7 +27,7 @@ services:
     service_id: githubpublic
     parameters:
       repo_name: 'testscript-repo-{{timestamp}}'
-      repo_url: 'https://github.com/sam-almighty/testdroid-samples'
+      repo_url: 'https://github.com/ajaychebbi/testdroid-samples'
       type: clone
       has_issues: true
       enable_traceability: true
@@ -35,7 +35,7 @@ services:
     service_id: githubpublic
     parameters:
       repo_name: 'app-repo-{{timestamp}}'
-      repo_url: 'https://github.com/sam-almighty/basic-starter'
+      repo_url: 'https://github.com/ajaychebbi/basic-starter'
       type: clone
       has_issues: false
       enable_traceability: false
