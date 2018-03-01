@@ -18,7 +18,7 @@ stages:
     value: sam.almighty85@gmail.com
     type: text
   - name: apkGitPushUrl
-    value: https://$gitPushToken:x-oauth-basic@github.com/sam-almighty/appuploadrepo master
+    value: https://$gitPushToken:x-oauth-basic@github.com/ajaychebbi/app-hosting master
     type: text
   jobs:
   - name: Install Android SDK, Fastlane and build apk
@@ -58,7 +58,7 @@ stages:
       git config --global user.email $gitPushEmail
       git config --global push.default matching
       cd /home/pipeline/appupload
-      git clone https://github.com/sam-almighty/appuploadrepo.git .
+      git clone https://github.com/ajaychebbi/app-hosting.git .
       ls
       rm -rf
       cp /home/pipeline/temp/app-release.apk .
@@ -112,7 +112,7 @@ stages:
     value: /home/pipeline/home/pipeline/$BUILD_ID/target
     type: text
   - name: applicationPath
-    value: https://github.com/sam-almighty/appuploadrepo/raw/master/app-release.apk
+    value: https://github.com/ajaychebbi/app-hosting/raw/master/app-release.apk
     type: text
   - name: executionType
     value: clientside
@@ -121,7 +121,7 @@ stages:
     value: AndroidAppiumExampleTest
     type: text
   - name: bitbarApiKey
-    value: 4NzWsHfszhngAZ7iyFAq0gGISkgtrtlJ
+    value: iTQkIJzlbMDa1vPev1IeTaCtdasiP5i0
     type: text
   jobs:
   - name: Test the app using Appium scripts on Bitbar
@@ -137,22 +137,22 @@ stages:
   - type: stage
   properties:
   - name: gitUser
-    value: sam-almighty
+    value: ajaychebbi
     type: text
   - name: gitToken
     value: d493a0f2ef2f8076ff53392e6bb445f631e28f19
     type: text
   - name: bitbarApiKey
-    value: '4NzWsHfszhngAZ7iyFAq0gGISkgtrtlJ:'
+    value: 'iTQkIJzlbMDa1vPev1IeTaCtdasiP5i0:'
     type: text
   - name: bitbarAppiumClientSideProject
-    value: https://cloud.testdroid.com/api/me/projects/139316294/runs
+    value: https://cloud.testdroid.com/api/me/projects/139933282/runs
     type: text
   - name: bitbarTestReportLocation
-    value: https://cloud.testdroid.com/#service/testrun/139316294/
+    value: https://cloud.testdroid.com/#service/testrun/139933282/
     type: text
   - name: issueGitRepo
-    value: https://api.github.com/repos/sam-almighty/testdroid-samples/issues
+    value: https://api.github.com/repos/ajaychebbi/app-hosting/issues
     type: text
   jobs:
   - name: LogsUpload
